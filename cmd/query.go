@@ -24,8 +24,9 @@ var queryCmd = &cobra.Command{
 		var priceDifference = res.C - res.Pc
 		var priceDifferncePercent = (res.C - res.Pc) * 100 / res.Pc
 
-		s := fmt.Sprintf("The current price for %s = %+v$ ( %+v$, %+v%%)", args[0], res.C, priceDifference, priceDifferncePercent)
+		s := fmt.Sprintf("💰 The current price for %s = %+v$  %+v$ ( %+v% % )", args[0], res.C, priceDifference, priceDifferncePercent)
 		fmt.Printf("%s", BaseStyle.Render(s))
 
 	},
+
 }
